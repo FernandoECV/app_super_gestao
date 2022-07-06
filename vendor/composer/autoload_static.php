@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitff0c947e9e9cee5c77a5546838781f60
+class ComposerStaticInit539c81b55d923e75c7d69b44c8e32702
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -174,8 +174,8 @@ class ComposerStaticInitff0c947e9e9cee5c77a5546838781f60
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -475,7 +475,10 @@ class ComposerStaticInitff0c947e9e9cee5c77a5546838781f60
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ContatoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContatoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PrincipalController' => __DIR__ . '/../..' . '/app/Http/Controllers/PrincipalController.php',
+        'App\\Http\\Controllers\\SobreNosController' => __DIR__ . '/../..' . '/app/Http/Controllers/SobreNosController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -5110,10 +5113,10 @@ class ComposerStaticInitff0c947e9e9cee5c77a5546838781f60
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitff0c947e9e9cee5c77a5546838781f60::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitff0c947e9e9cee5c77a5546838781f60::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitff0c947e9e9cee5c77a5546838781f60::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitff0c947e9e9cee5c77a5546838781f60::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit539c81b55d923e75c7d69b44c8e32702::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit539c81b55d923e75c7d69b44c8e32702::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit539c81b55d923e75c7d69b44c8e32702::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit539c81b55d923e75c7d69b44c8e32702::$classMap;
 
         }, null, ClassLoader::class);
     }
