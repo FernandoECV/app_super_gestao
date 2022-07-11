@@ -38,130 +38,56 @@ Route::get('/login', function(){ return 'Login';});
 
 Route::prefix('/app')->group(function(){
     Route::get('/clientes', function(){ 
-        // $clientes = [
-        //     0 => [
-        //             "Nome" => "Fernando",
-        //             "Idade" => 29,
-        //             "Profissão" => "Analista de Sistemas",
-        //             "Sexo" => "Masculino",
-        //     ],
-        //     1 => [
-        //             "Nome" => "Felipe",
-        //             "Idade" => 27,
-        //             "Profissão" => "Analista de Sistemas",
-        //             "Sexo" => "Masculino",
-        //     ] 
-
-        // ];        
+        $clientes = [
+            0 => [
+                    "Nome" => "Fernando",
+                    "Idade" => 29,
+                    "Profissão" => "Analista de Sistemas",
+                    "Sexo" => "Masculino",
+            ],
+            1 => [
+                    "Nome" => "Felipe",
+                    "Idade" => 27,
+                    "Profissão" => "Analista de Sistemas",
+                    "Sexo" => "Masculino",
+            ],
+            2 => [
+              "Nome" => "Nathalia",
+              "Idade" => 26,
+              "Profissão" => "Arquiteta FullStack de Software",
+              "Sexo" => "Feminino",
+          ]
+        ];        
         
         // echo "<pre>";
         // var_dump($clientes);
         // echo "</pre>";
 
-          // $dados = [
-          //   ["Fernando", "29", "Analista de Sistemas", "Masculino"],
-          //   ["Felipe", "27", "Analista de Sistemas", "Masculino"],
-
-          // ];
-
-          // $html_table = "<table border=1; width=50%;>
-          //       <thead>
-          //         <tr>Nome</tr>
-          //         <tr>Idade</tr>
-          //         <tr>Profissão</tr>
-          //         <tr>Sexo</tr>
-          //       </thead>
-
-          //       <tbody>
-          //           foreach($dados as $item):
-          //              <tr>
-          //                 <td>$item[0]</td>
-          //                 <td>$item[1]</td>
-          //                 <td>$item[2]</td>
-          //                 <td>$item[3]</td>
-          //             </tr>
-          //           endforeach; 
-
-          //      </tbody>";
-
-          //      echo $html_table;
         
-        $html_table = "<table border= 1; width=50%;> 
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Fernando</td>
-              <td>29</td>
-              <td>Analista de Sistemas</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Felipe</td>
-              <td>27</td>
-              <td>Analista de Sistemas</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Cláudia</td>
-              <td>30</td>
-              <td>Analista de Requisitos</td>
-              <td>Feminino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Maria</td>
-              <td>40</td>
-              <td>Densenvolvedora Mobile</td>
-              <td>Feminino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Mateus</td>
-              <td>35</td>
-              <td>Cientista de Dados</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Carlos</td>
-              <td>25</td>
-              <td>Engenheiro de Software</td>
-              <td>Masculino</td>
-            </tr>
-          </table>";
+          $html_table = "<table border=1; width=50%;>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                    <th>Sexo</th>
+                  </tr>                  
+                </thead><tbody>";
 
-          echo $html_table;
+                foreach($clientes as $cliente):
+                  //print_r($cliente) ;
+                  echo "<br>";
+                  $html_table .=  "<tr><td> {$cliente['Nome']} </td>";
+                  $html_table .=  "<td> {$cliente['Idade']} </td>";
+                  $html_table .=  "<td> {$cliente['Profissão']} </td>";
+                  $html_table .=  "<td> {$cliente['Sexo']} </td></tr>";
+                endforeach;
+
+                $html_table .= "</tbody>";
+
+               echo $html_table;             
+
+          // echo $html_table;
 
         ;});   
     Route::get('/fornecedores', function(){ return 'Fornecedores';});
