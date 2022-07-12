@@ -68,11 +68,7 @@ Route::prefix('/app')->group(function(){
               "Profissão" => "Arquiteta FullStack de Software",
               "Sexo" => "Feminino",
           ]
-        ];        
-        
-        // echo "<pre>";
-        // var_dump($clientes);
-        // echo "</pre>";
+        ];   
 
           $html_table = "<table border=1; width=50%;>
                 <thead>
