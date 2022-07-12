@@ -20,24 +20,24 @@ Route::get('/', function () {
 });
 */
 
-// Route::get('/', 'PrincipalController@principal');
-// Route::get('/sobre-nos', 'SobreNosController@sobreNos');
-// Route::get('/contato', 'ContatoController@contato');
-// Route::get('/login', function(){ return 'Login';});
-
-// Route::prefix('/app')->group(function(){
-//     Route::get('/clientes', function(){ return 'Clientes';});   
-//     Route::get('/fornecedores', function(){ return 'Fornecedores';});
-//     Route::get('/produtos', function(){ return 'Produtos';});
-// });
-
 Route::get('/', 'PrincipalController@principal');
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
 Route::get('/contato', 'ContatoController@contato');
 Route::get('/login', function(){ return 'Login';});
 
 Route::prefix('/app')->group(function(){
-    Route::get('/clientes', function(){ 
+    Route::get('/clientes', function(){ return 'Clientes';});   
+    Route::get('/fornecedores', function(){ return 'Fornecedores';});
+    Route::get('/produtos', function(){ return 'Produtos';});
+});
+
+// Route::get('/', 'PrincipalController@principal');
+// Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+// Route::get('/contato', 'ContatoController@contato');
+// Route::get('/login', function(){ return 'Login';});
+
+// Route::prefix('/app')->group(function(){
+//     Route::get('/clientes', function(){ 
         // $clientes = [
         //     0 => [
         //             "Nome" => "Fernando",
@@ -86,87 +86,87 @@ Route::prefix('/app')->group(function(){
 
           //      echo $html_table;
         
-        $html_table = "<table border= 1; width=50%;> 
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Fernando</td>
-              <td>29</td>
-              <td>Analista de Sistemas</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Felipe</td>
-              <td>27</td>
-              <td>Analista de Sistemas</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Cláudia</td>
-              <td>30</td>
-              <td>Analista de Requisitos</td>
-              <td>Feminino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Maria</td>
-              <td>40</td>
-              <td>Densenvolvedora Mobile</td>
-              <td>Feminino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Mateus</td>
-              <td>35</td>
-              <td>Cientista de Dados</td>
-              <td>Masculino</td>
-            </tr>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-              <th>Sexo</th>
-            </tr>
-            <tr>
-              <td>Carlos</td>
-              <td>25</td>
-              <td>Engenheiro de Software</td>
-              <td>Masculino</td>
-            </tr>
-          </table>";
+//         $html_table = "<table border= 1; width=50%;> 
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Fernando</td>
+//               <td>29</td>
+//               <td>Analista de Sistemas</td>
+//               <td>Masculino</td>
+//             </tr>
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Felipe</td>
+//               <td>27</td>
+//               <td>Analista de Sistemas</td>
+//               <td>Masculino</td>
+//             </tr>
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Cláudia</td>
+//               <td>30</td>
+//               <td>Analista de Requisitos</td>
+//               <td>Feminino</td>
+//             </tr>
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Maria</td>
+//               <td>40</td>
+//               <td>Densenvolvedora Mobile</td>
+//               <td>Feminino</td>
+//             </tr>
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Mateus</td>
+//               <td>35</td>
+//               <td>Cientista de Dados</td>
+//               <td>Masculino</td>
+//             </tr>
+//             <tr>
+//               <th>Nome</th>
+//               <th>Idade</th>
+//               <th>Profissão</th>
+//               <th>Sexo</th>
+//             </tr>
+//             <tr>
+//               <td>Carlos</td>
+//               <td>25</td>
+//               <td>Engenheiro de Software</td>
+//               <td>Masculino</td>
+//             </tr>
+//           </table>";
 
-          echo $html_table;
+//           echo $html_table;
 
-        ;});   
-    Route::get('/fornecedores', function(){ return 'Fornecedores';});
-    Route::get('/produtos', function(){ return 'Produtos';});
-});
+//         ;});   
+//     Route::get('/fornecedores', function(){ return 'Fornecedores';});
+//     Route::get('/produtos', function(){ return 'Produtos';});
+// });
 
 /* verbo http
 
