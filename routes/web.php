@@ -33,8 +33,11 @@ Route::get('/rota2', function() {
   return redirect()->route('site.rota1');
 })->name('site.rota2');
 
-//Route::get('/clientes', 'ClienteController@listagemClientes');
-// Route::redirect('/rota2', '/rota1');
+Route::fallback(function() {
+    echo'A rota acessada não existe. <a href="'.route('site.index').'">clique aqui<a/> para ir para a página inicial';
+});
+
+// Route::get('/clientes', 'ClienteController@listagemClientes');
 
 // Route::get('/', 'PrincipalController@principal');
 // Route::get('/sobre-nos', 'SobreNosController@sobreNos');
@@ -61,7 +64,13 @@ Route::get('/rota2', function() {
 //               "Idade" => 26,
 //               "Profissão" => "Arquiteta FullStack de Software",
 //               "Sexo" => "Feminino",
-//           ]
+//             ],
+//             3 => [
+//               "Nome" => "Juliano",
+//               "Idade" => 30,
+//               "Profissão" => "Analista de requisitos",
+//               "Sexo" => "Masculino",
+//             ]          
 
 //         ];   
     
