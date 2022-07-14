@@ -37,7 +37,7 @@ Route::fallback(function() {
     echo'A rota acessada não existe. <a href="'.route('site.index').'">clique aqui<a/> para ir para a página inicial';
 });
 
-// Route::get('/clientes', 'ClienteController@listagemClientes');
+Route::get('/clientes', 'ClienteController@listagemClientes');
 
 // Route::get('/', 'PrincipalController@principal');
 // Route::get('/sobre-nos', 'SobreNosController@sobreNos');
