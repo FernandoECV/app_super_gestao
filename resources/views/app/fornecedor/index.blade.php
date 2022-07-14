@@ -1,15 +1,23 @@
 <h3>Fornecedor</h3>
 
-{{'Texto de teste'}}
-
-{{-- Comentários --}}
-
 @php
-    // Para comentários de uma linha
-    /*
-        Para comentários de multiplas linhas 
-    */
+    // if (condition) {
+    //     # code...
+    // }elseif (condition) {
+    //     # code...
+    // }
 
-    echo '<br>Texto de teste';
-
+    // else {
+    //     # code...
+    // }
 @endphp
+
+{{-- @dd($fornecedores)--}}
+
+@if(count($fornecedores) > 0 && count($fornecedores) < 10)
+    <h3>Existem alguns fornecedores cadastrados </h3>
+@elseif(count($fornecedores) > 10)        
+    <h3>Existem vários fornecedores cadastrados </h3>    
+@else
+    <h3>Ainda não existem fornecedores cadastrados </h3>    
+@endif
