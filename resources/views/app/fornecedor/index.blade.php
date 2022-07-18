@@ -10,6 +10,6 @@ Fornecedor: {{ $fornecedores[0]['nome'] }}
 Status: {{ $fornecedores[0]['status'] }}
 <br>
     @isset($fornecedores[0]['cnpj'])
-        CNPJ: {{ $fornecedores[1]['cnpj'] }}
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
     @endisset
 @endisset
