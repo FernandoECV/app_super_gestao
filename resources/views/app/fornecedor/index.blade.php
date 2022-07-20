@@ -25,8 +25,7 @@
             <br>
             Telefone: ({{ $fornecedores[$i]['ddd'] ?? '' }}) {{ $fornecedores[$i]['telefone'] ?? '' }}
             <hr> 
-            @php $i++ @endphp
-            
+            @php $i++ @endphp         
     @endwhile    
 @endisset
 
